@@ -31,7 +31,7 @@ public class PostController {
         return new ModelAndView("redirect:/posts");
     }
 
-    
+
 
 
 

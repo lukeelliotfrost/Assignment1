@@ -19,6 +19,10 @@ public class Review {
     public Review(){
     }
 
+    public Review(String review){
+        this.review = review;
+    }
+
     public long getId() {
         return id;
     }

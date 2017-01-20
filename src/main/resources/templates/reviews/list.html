@@ -1,0 +1,39 @@
+<html layout:decorator="layout" xmlns:layout="http://www.w3.org/1999/xhtml">
+
+<div layout:fragment="content">
+
+    <a class="btn btn-primary" href="/reviews/new">Add new Review</a>
+
+    <table class="table table-striped" id="posts_list">
+        <thead>
+        <tr>
+            <th>Comments</th>
+            <th>Action</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="review : ${reviews}">
+            <td class="message" data-th-text="${review.message}"></td>
+
+            <td>
+                <a th:href="@{'/reviews/{id}/delete'(id=${review.id})}" class="delete" th:attr="name=${review.message}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </span>
+                </a>
+            </td>
+
+            <td>
+                <a th:href="@{'/reviews/{id}/edit'(id=${review.id})}" class="edit" th:attr="name=${review.message}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>

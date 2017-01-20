@@ -1,7 +1,7 @@
 package com.example;
 
-import com.example.domain.Review;
 import com.example.domain.ReviewRepository;
+import com.example.domain.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

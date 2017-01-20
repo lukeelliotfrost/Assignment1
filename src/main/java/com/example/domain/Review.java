@@ -8,34 +8,30 @@ import javax.persistence.Id;
 /**
  * Created by Luke Frost on 23/12/2016.
  */
-@Entity
-public class Review {
+ @Entity
+ public class Review {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private String review;
+     @Id
+     @GeneratedValue(strategy = GenerationType.AUTO)
+     private long id;
+     private String message;
 
-    public Review(){
-    }
+     public Review(){
+     }
 
-    public Review(String review){
-        this.review = review;
-    }
+     public Review(String message){
+         this.message = message;
+     }
 
-    public long getId() {
-        return id;
-    }
+     public long getId() {
+         return id;
+     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+     public String getMessage() {
+         return message;
+     }
 
-    public String getReview() {
-        return review;
-    }
-
-    public void setReview(String review) {
-        this.review = review;
-    }
-}
+     public void setMessage(String message) {
+         this.message = message;
+     }
+ }

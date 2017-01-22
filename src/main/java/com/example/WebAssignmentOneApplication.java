@@ -17,6 +17,8 @@ public class WebAssignmentOneApplication implements CommandLineRunner{
 		SpringApplication.run(WebAssignmentOneApplication.class, args);
 	}
 
+	/* Displays the text of the Reviews submitted in the repository when the website is run
+-------------------------------------------------- */
 	@Override
 	public void run(String... strings) throws Exception {
 		for (int i = 0; i < 5; i++){

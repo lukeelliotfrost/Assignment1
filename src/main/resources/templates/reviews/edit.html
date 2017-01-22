@@ -2,10 +2,10 @@
     <div layout:fragment="content">
         <form method="post" name="comment_form" id="comment_form" action="/reviews/update" role="form">
             <div class="form-group">
-                <label for="message">Post</label>
-                <textarea rows="5" class="form-control" id="message" name="message" th:text="${post.message}"/>
+                <label for="message">Review</label>
+                <textarea rows="5" class="form-control" id="message" name="message" th:text="${review.message}"/>
             </div>
-            <input type="hidden" id="post_id" rows="5" class="form-control" name="review_id" th:value="${review.id}"/>
+            <input type="hidden" id="review_id" rows="5" class="form-control" name="review_id" th:value="${review.id}"/>
             <button type="submit" id="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
